@@ -1,9 +1,21 @@
-# -------------------------------------------------------
-# Player loggin option to lobby 
-# -------------------------------------------------------
-# note: if you already have plugin spawn players to lobby 
-#       then DON'T enable this option to avoid conflict   
-# -------------------------------------------------------
+# -------------------------------
+# TNTRUN CONFIGURATIONS
+# version v1.2
+# -------------------------------
+# Multi-languages support
+# EN - English 
+# KO - Korean 
+# CN - Chinese
+# JP - Japanese
+# SP - Spanish
+# FR - French
+# RU - Russina
+# BP - Brazil Portuguese
+# .... more
+# ---------------------------
+#  comming soon language: "EN"
+#  comming soon run_selftest_message: "YES"
+# -----------------------------
 enable_spaw_lobby: "no"
 #----------------------------
 #----------------------------- 
