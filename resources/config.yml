@@ -28,10 +28,9 @@ reset_type: "FLOOR"
 # TnTRun lobby location
 # ---------------------------
 tntrun_lobby_world: "world"
-tntrun_lobby_x: "141"
-tntrun_lobby_y: "6"
-tntrun_lobby_z: "148"
-#---------------------------
+tntrun_lobby_x: "100"
+tntrun_lobby_y: "5"
+tntrun_lobby_z: "109"
 #---------------------------
 # TnTRun Arena location
 #--------------------------- 
@@ -84,9 +83,9 @@ tntrun_ground_exit_button_z: "130"
 #---------------------------
 # TnTRun Sign JOIN
 #--------------------------- 
-tntrun_join_sign_x: "143"
-tntrun_join_sign_y: "7"
-tntrun_join_sign_z: "155"
+tntrun_join_sign_x: "99"
+tntrun_join_sign_y: "6"
+tntrun_join_sign_z: "107"
 #
 #---------------------------
 # TnTRun Sign START
@@ -98,13 +97,13 @@ tntrun_start_sign_z: "155"
 #---------------------------
 # TnTRun Sign RESET
 #--------------------------- 
-tntrun_reset_sign_x: "142"
-tntrun_reset_sign_y: "7"
-tntrun_reset_sign_z: "155"
+tntrun_reset_sign_x: "100"
+tntrun_reset_sign_y: "6"
+tntrun_reset_sign_z: "107"
 #
 #---------------------------
 # TnTRun Sign STATUS
 #--------------------------- 
-tntrun_status_sign_x: "141"
-tntrun_status_sign_y: "7"
-tntrun_status_sign_z: "155"
+tntrun_status_sign_x: "101"
+tntrun_status_sign_y: "6"
+tntrun_status_sign_z: "107"
