@@ -1,6 +1,6 @@
 name: TNTRun
 version: 1.1
-api
+api:
 - 1.0.0
 - 2.0.0
 main: game\tntrun\TNTRun
