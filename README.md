@@ -33,7 +33,7 @@ Change log for Version 1.1 -  March.24.2016
 - bug fixes
 
 =========================================
-What is cooming in new upadte?
+What is cooming in new upadte 1.2?
 =========================================
 - Kits
 - MiniShop
