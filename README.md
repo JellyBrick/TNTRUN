@@ -33,10 +33,18 @@ Change log for Version 1.1 -  March.24.2016
 - bug fixes
 
 =========================================
-What is cooming in new upadte 1.2?
+What is cooming in new upadte v1.2?
 =========================================
 - Kits
-- MiniShop
 - Bug Fixes
+=========================================
+What is cooming in new upadte v1.3?
+=========================================
+- MiniShop
 - New Support for new arena
 - NPC
+=========================================
+What is cooming in new upadte v2.0?
+=========================================
+- MiniShop ItemCase and item shop
+- MiniShop Economy
