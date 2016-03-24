@@ -26,7 +26,6 @@ Admin/Ops Commands:
 =========================================
 What is new?
 =========================================
-
 Change log for Version 1.1 -  March.24.2016
 - New Map
 - Api support for 2.0.0 and 1.0.0
@@ -36,7 +35,6 @@ Change log for Version 1.1 -  March.24.2016
 What is cooming in new upadte v1.2?
 =========================================
 - Kits
-- Bug Fixes
 =========================================
 What is cooming in new upadte v1.3?
 =========================================
