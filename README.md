@@ -25,5 +25,7 @@ Admin/Ops Commands:
 
 Arena build game freeze need fix
 
+Plz down load the map
+
 Plugin is stable in beta 1
 in v 1.2 support multilange
