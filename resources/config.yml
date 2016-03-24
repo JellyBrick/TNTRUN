@@ -57,10 +57,15 @@ tntrun_join_button_z: "155"
 # TnTRun button START
 #--------------------------- 
 tntrun_start_button_x: "89"
-tntrun_start_button_y: "64"
+tntrun_start_button_y: "44"
 tntrun_start_button_z: "130"
+#
 #---------------------------
 # TnTRun button RESET
+#--------------------------- 
+tntrun_reset_button_x: "142"
+tntrun_reset_button_y: "7"
+tntrun_reset_button_z: "155"
 #--------------------------- 
 tntrun_top_exit_button_x: "87"
 tntrun_top_exit_button_y: "64"
