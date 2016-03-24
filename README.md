@@ -23,9 +23,20 @@ Admin/Ops Commands:
 "/tntrun blockon"  -- command to turn on display of block locations 
 "/tntrun blockoff" -- command to turn off display of block locations 
 
-Arena build game freeze need fix
+=========================================
+What is new?
+=========================================
 
-Plz down load the map
+Change log for Version 1.1 -  March.24.2016
+- New Map
+- Api support for 2.0.0 and 1.0.0
+- bug fixes
 
-Plugin is stable in beta 1
-in v 1.2 support multilange
+=========================================
+What is cooming in new upadte?
+=========================================
+- Kits
+- MiniShop
+- Bug Fixes
+- New Support for new arena
+- NPC
