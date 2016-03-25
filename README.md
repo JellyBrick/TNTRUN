@@ -32,19 +32,19 @@ Change log for Version 1.1 -  March.24.2016
 - bug fixes
 
 =========================================
-What is cooming in new upadte v1.2?
+What is comming in new update v1.2?
 =========================================
 - Kits
 =========================================
-What is cooming in new upadte v1.3?
+What is comming in new update v1.3?
 =========================================
 - MiniShop
 - New Support for new arena
 - NPC
 =========================================
-What is cooming in new upadte v2.0?
+What is comming in new update v2.0?
 =========================================
 - MiniShop ItemCase and item shop
 - MiniShop Economy
 
-Do Not pulll TNTRUN V1.1 BETA
+Do Not pull request or fork TNTRUN V1.1 BETA
