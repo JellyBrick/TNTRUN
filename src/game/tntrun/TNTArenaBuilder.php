@@ -49,7 +49,7 @@ use pocketmine\entity\FallingBlock;
 class TNTArenaBuilder {
 	// board size
 	public $boardsize = 22;
-	public $boardheight = 36;
+	public $boardheight = 46;
 	public $boardBlocksTypes = [ ];
 	
 	// plug-in
@@ -113,9 +113,9 @@ class TNTArenaBuilder {
 		$this->buildFloor ( $level, $px, ($py + 26), $pz, $bsize );
 		// bottom floor 3
 		$this->buildFloor ( $level, $px, ($py + 36), $pz, $bsize );
-		// $this->buildGlassTop($player, round($px/2), ($py+46), round($pz/2), $bsize);
+		// bottom floor 2
 		// bottom floor 4
-		// $this->buildFloor($level, $px, ($py+46), $pz, $bsize);
+                $this->buildFloor ( $level, $px, ($py + 46), $pz, $bsize );
 		// bottom floor 5
 		// $this->buildFloor($level, $px, ($py+56), $pz, $bsize);
 		$this->addGameButtonsOnTopFloor ( $level );
@@ -154,6 +154,7 @@ class TNTArenaBuilder {
 		$this->buildBoardLayer ( $level, $px, $py + 2, $pz, 44, $size );
 	}
 	
+	
 	/**
 	 * Build Arena
 	 *
@@ -185,9 +186,8 @@ class TNTArenaBuilder {
 		$this->ResetFloor ( $level, $px, ($py + 26), $pz, $bsize );
 		// bottom floor 3
 		$this->ResetFloor ( $level, $px, ($py + 36), $pz, $bsize );
-		// $this->buildGlassTop($player, round($px/2), ($py+46), round($pz/2), $bsize);
 		// bottom floor 4
-		// $this->ResetFloor($level, $px, ($py+46), $pz, $bsize);
+		$this->ResetFloor ( $level, $px, ($py + 46), $pz, $bsize );
 		// bottom floor 5
 		// $this->ResetFloor($level, $px, ($py+56), $pz, $bsize);
 		
