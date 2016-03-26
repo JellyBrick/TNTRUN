@@ -31,12 +31,17 @@ Change log for Version 1.1 -  March.24.2016
 - Api support for 2.0.0 and 1.0.0
 - bug fixes
 
+Change log for Version 1.2 -  March.26.2016
+- New Map
+- 1 more floor 
+- bug fixes
+
 =========================================
-What is comming in new update v1.2?
+What is comming in new update v1.3?
 =========================================
 - Kits
 =========================================
-What is comming in new update v1.3?
+What is comming in new update v1.4?
 =========================================
 - MiniShop
 - New Support for new arena
