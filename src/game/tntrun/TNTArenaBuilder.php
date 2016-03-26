@@ -49,7 +49,7 @@ use pocketmine\entity\FallingBlock;
 class TNTArenaBuilder {
 	// board size
 	public $boardsize = 22;
-	public $boardheight = 46;
+	public $boardheight = 53;
 	public $boardBlocksTypes = [ ];
 	
 	// plug-in
