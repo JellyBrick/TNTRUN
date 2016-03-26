@@ -44,9 +44,9 @@ tntrun_arena_y: "4"
 tntrun_arena_z: "118"
 #---------------------------
 # player entrance
-tntrun_arena_enter_x: "85"
-tntrun_arena_enter_y: "46"
-tntrun_arena_enter_z: "126"
+tntrun_arena_enter_x: "86"
+tntrun_arena_enter_y: "52"
+tntrun_arena_enter_z: "131"
 #---------------------------
 # TnTRun button JOIN
 #--------------------------- 
@@ -57,7 +57,7 @@ tntrun_join_button_z: "155"
 # TnTRun button START
 #--------------------------- 
 tntrun_start_button_x: "89"
-tntrun_start_button_y: "44"
+tntrun_start_button_y: "54"
 tntrun_start_button_z: "130"
 #
 #---------------------------
@@ -74,7 +74,7 @@ tntrun_top_exit_button_z: "130"
 # TnTRun top floor Exit button
 #--------------------------- 
 tntrun_top_exit_button_x: "87"
-tntrun_top_exit_button_y: "44"
+tntrun_top_exit_button_y: "54"
 tntrun_top_exit_button_z: "130"
 #
 #---------------------------
@@ -89,7 +89,6 @@ tntrun_ground_exit_button_z: "130"
 tntrun_join_sign_x: "99"
 tntrun_join_sign_y: "6"
 tntrun_join_sign_z: "107"
-#
 #---------------------------
 # TnTRun Sign START
 #--------------------------- 
