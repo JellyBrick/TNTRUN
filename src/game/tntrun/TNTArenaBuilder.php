@@ -151,6 +151,7 @@ class TNTArenaBuilder {
 		// add middle layer
 		$this->buildBoardLayer ( $level, $px, $py + 1, $pz, 12, $size );
 		// add top layer --98
+	}
 		$this->buildBoardLayer ( $level, $px, $py + 2, $pz, 44, $size );
 	}
 	
