@@ -48,3 +48,5 @@ What is comming in new update v2.0?
 - MiniShop Economy
 
 Do Not pull request or fork TNTRUN V1.1 BETA
+
+Sadley TNTRUN is under a big re code to add all the cool stuff.
