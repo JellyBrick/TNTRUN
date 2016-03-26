@@ -114,7 +114,6 @@ class TNTArenaBuilder {
 		// bottom floor 3
 		$this->buildFloor ( $level, $px, ($py + 36), $pz, $bsize );
 		// bottom floor 2
-		$this->buildGlassTop ( $player, round ($px / 2), ($py + 46), round ($pz / 2), $bsize);
 		// bottom floor 4
                 $this->buildFloor ( $level, $px, ($py + 46), $pz, $bsize );
 		// bottom floor 5
@@ -186,7 +185,6 @@ class TNTArenaBuilder {
 		$this->ResetFloor ( $level, $px, ($py + 26), $pz, $bsize );
 		// bottom floor 3
 		$this->ResetFloor ( $level, $px, ($py + 36), $pz, $bsize );
-		$this->buildGlassTop  ($player, round ($px / 2), ($py + 46), roun d($pz / 2), $bsize);
 		// bottom floor 4
 		$this->ResetFloor ( $level, $px, ($py + 46), $pz, $bsize );
 		// bottom floor 5
