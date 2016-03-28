@@ -170,7 +170,9 @@ class TNTRunCommand {
 				$this->pgin->arenaPlayers = [ ];
 				
 				// send the arena owner first
-				$player->sendTip ( "[TR]TnTRun Arena Created. ready to play" ););
+				$player->sendMessage ( "***************************************" );
+				$player->sendMessage ( "* TnTRun Arena Created. ready to play! *" );
+				$player->sendMessage ( "***************************************" );
 				
 				$this->pgin->game_mode = 0;				
 				return;
@@ -183,11 +185,11 @@ class TNTRunCommand {
 // 					return;
 // 				}
 				// $this->pgin->getServer()->getLevelByName($name);
-				$player->getServer ()->broadcastMessage( "[TR] TnTRun Started!" );
+				$player->getServer ()->broadcastMessage( "TnTRun Started!" );
 				
 				foreach ( $this->pgin->arenaPlayers as $p ) {
 					$this->pgin->livePlayers [$p->getName ()] = $p;
-					$p->sendMessage ( "[TR] TnTRun player! Go, Go, Go!!!" );
+					$p->sendMessage ( "TnTRun player! Go, Go, Go!!!" );
 					//$explosion = new Explosion ( new Position ( $player->x, $player->y + 3, $player->z ), 2 );
 					//$explosion->explode ();
 				}				
@@ -199,10 +201,10 @@ class TNTRunCommand {
 			
 			if (strtolower ( $args [0] ) == "cleanup") {
 				if (! $player->isOp ()) {
-					$player->sendMessage ( "[TR] You are not authorized to use this command!" );
+					$player->sendMessage ( "* You are not authorized to use this command!*" );
 					return;
 				}
-				$player->sendMessage ( "[TR] Clean up TnTRun Arena, please wait!" );
+				$player->sendMessage ( "Clean up TnTRun Arena, please wait!" );
 				$this->cleanUpArena ( $player->getLevel () );				
 				$player->sendMessage ( "use /tntrun reset to re-build arena." );	
 
@@ -213,7 +215,7 @@ class TNTRunCommand {
 			if (strtolower ( $args [0] ) == "join") {
 				
 				if (!$this->isArenaAvailable()) {
-					$player->sendMessage ( "[TR] Sorry, TnTRun game in-play. please wait!" );
+					$player->sendMessage ( "Sorry, TnTRun game in-play. please wait!" );
 					return;
 				}
 				
@@ -289,7 +291,7 @@ class TNTRunCommand {
 				$event->getPlayer ()->sendMessage ( "when ready, tap the [green] block to [start]" );
 				$event->getPlayer ()->sendMessage ( "or tap the [gold] block to [exit]." );				
 				$event->getPlayer ()->sendMessage ( "----------------------------------------" );				
-				$event->getPlayer ()->getServer()->broadcastMessage($player->getName ()."[TR] has Join TnT Run!");
+				$event->getPlayer ()->getServer()->broadcastMessage($player->getName ()." has Join TnT Run!");
 			}
 		}
 	}
