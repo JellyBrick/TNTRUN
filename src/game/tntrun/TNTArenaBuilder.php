@@ -73,8 +73,8 @@ class TNTArenaBuilder {
 				"stone6" => "42",
 				"stone7" => "42",
 				"stone8" => "50",
+				"Torch" => "50",
 				"GLOWSTONE_BLOCK" => "89",
-				"Torch" => "50" 
 		);
 	}
 	
@@ -103,7 +103,7 @@ class TNTArenaBuilder {
 		$bheight = $this->boardheight;
 		
 		// built a glass tower wrap around the building
-		$this->buildHoloWallByType ( $level, $bsize + 2, ($py + $bsize + 30), $px, $py, $pz, 20 );
+		$this->buildHoloWallByType ( $level, $bsize + 2, ($py + $bsize + 40), $px, $py, $pz, 20 );
 		
 		// water tank floor
 		$this->buildWaterTank ( $level, $bsize, $bsize, $px, ($py + 1), $pz, 8 );
@@ -113,11 +113,14 @@ class TNTArenaBuilder {
 		$this->buildFloor ( $level, $px, ($py + 26), $pz, $bsize );
 		// bottom floor 3
 		$this->buildFloor ( $level, $px, ($py + 36), $pz, $bsize );
-		// bottom floor 2
 		// bottom floor 4
                 $this->buildFloor ( $level, $px, ($py + 46), $pz, $bsize );
 		// bottom floor 5
-		// $this->buildFloor($level, $px, ($py+56), $pz, $bsize);
+		$this->buildFloor ( $level, $px, ($py + 56), $pz, $bsize );
+		// bottom floor 6
+		$this->buildFloor ( $level, $px, ($py + 66), $pz, $bsize );
+		// bottom floor 7
+		$this->buildFloor ( $level, $px, ($py + 76), $pz, $bsize );
 		$this->addGameButtonsOnTopFloor ( $level );
 		
 		$pos = new Position ();
@@ -148,6 +151,10 @@ class TNTArenaBuilder {
 		$this->buildWall ( $level, $size + 1, $size + 1 - 5, $px, $py - 1, $pz, 1 );
 		// add bottom layer stone
 		$this->buildBoardLayer ( $level, $px, $py, $pz, 46, $size );
+		// add middle layer
+		$this->buildBoardLayer ( $level, $px, $py + 1, $pz, 12, $size );
+		// add top layer --98
+		$this->buildBoardLayer ( $level, $px, $py + 2, $pz, 44, $size );
 	}
 	
 	
@@ -185,7 +192,11 @@ class TNTArenaBuilder {
 		// bottom floor 4
 		$this->ResetFloor ( $level, $px, ($py + 46), $pz, $bsize );
 		// bottom floor 5
-		// $this->ResetFloor($level, $px, ($py+56), $pz, $bsize);
+		$this->ResetFloor ( $level, $px, ($py + 56), $pz, $bsize );
+		// bottom floor 6
+		$this->ResetFloor ( $level, $px, ($py + 66), $pz, $bsize );
+		// bottom floor 8
+		$this->ResetFloor ( $level, $px, ($py + 76), $pz, $bsize );
 		
 		$this->addGameButtonsOnTopFloor ( $level );
 		
@@ -249,12 +260,8 @@ class TNTArenaBuilder {
 	public function ResetFloor(Level $level, $px, $py, $pz, $size) {
 		// build walls
 		// $this->buildWall($player, $size+1, $size+1-5, $px, $py-1, $pz, 1);
-		// add bottom layer stone
-		$this->resetBoardLayer ( $level, $px, $py, $pz, 46, $size );
-		// add middle layer
-		$this->resetBoardLayer ( $level, $px, $py + 1, $pz, 12, $size );
-		// add top layer --98
-		$this->resetBoardLayer ( $level, $px, $py + 2, $pz, 44, $size );
+		// add tnt middle
+		$this->resetBoardLayer ( $level, $px, $py + 1, $pz, 46, $size );
 	}
 	
 	/**
