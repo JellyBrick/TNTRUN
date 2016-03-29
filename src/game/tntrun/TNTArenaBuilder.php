@@ -73,6 +73,7 @@ class TNTArenaBuilder {
 				"stone6" => "42",
 				"stone7" => "42",
 				"stone8" => "50",
+				"Torch" => "50",
 				"GLOWSTONE_BLOCK" => "89",
 		);
 	}
