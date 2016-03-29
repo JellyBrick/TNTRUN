@@ -153,8 +153,6 @@ class TNTArenaBuilder {
 		$this->buildBoardLayer ( $level, $px, $py, $pz, 46, $size );
 		// add middle layer
 		$this->buildBoardLayer ( $level, $px, $py + 1, $pz, 12, $size );
-		// add top layer --98
-		$this->buildBoardLayer ( $level, $px, $py + 2, $pz, 44, $size );
 	}
 	
 	
@@ -260,8 +258,12 @@ class TNTArenaBuilder {
 	public function ResetFloor(Level $level, $px, $py, $pz, $size) {
 		// build walls
 		// $this->buildWall($player, $size+1, $size+1-5, $px, $py-1, $pz, 1);
-		// add tnt middle
-		$this->resetBoardLayer ( $level, $px, $py + 1, $pz, 46, $size );
+		// add bottom layer stone
+		$this->resetBoardLayer ( $level, $px, $py, $pz, 46, $size );
+		// add middle layer
+		$this->resetBoardLayer ( $level, $px, $py + 1, $pz, 12, $size );
+		// add top layer --98
+		$this->resetBoardLayer ( $level, $px, $py + 2, $pz, 44, $size );
 	}
 	
 	/**
