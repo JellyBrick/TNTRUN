@@ -103,7 +103,7 @@ class TNTArenaBuilder {
 		$bheight = $this->boardheight;
 		
 		// built a glass tower wrap around the building
-		$this->buildHoloWallByType ( $level, $bsize + 2, ($py + $bsize + 70), $px, $py, $pz, 20 );
+		$this->buildHoloWallByType ( $level, $bsize + 2, ($py + $bsize + 40), $px, $py, $pz, 20 );
 		
 		// water tank floor
 		$this->buildWaterTank ( $level, $bsize, $bsize, $px, ($py + 1), $pz, 8 );
