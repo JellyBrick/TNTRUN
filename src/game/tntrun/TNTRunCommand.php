@@ -82,35 +82,35 @@ class TNTRunCommand {
 			
 			if (strtolower ( $args [0] ) == "blockon") {
 				if (! $player->isOp ()) {
-					$player->sendMessage ( "* You are not authorized to use this command!*" );
+					$player->sendTip ( "* You are not authorized to use this command!*" );
 					return;
 				}
 				$this->pgin->pos_display_flag = 1;
-				$sender->sendMessage ( "TnTRun block position display ON" );
+				$sender->sendTip ( "TnTRun block position display ON" );
 				return;
 			}
 			if (strtolower ( $args [0] ) == "blockoff") {
 				if (! $player->isOp ()) {
-					$player->sendMessage ( "* You are not authorized to use this command!*" );
+					$player->sendTip ( "* You are not authorized to use this command!*" );
 					return;
 				}
 				$this->pgin->pos_display_flag = 0;
-				$sender->sendMessage ( "TnTRun block position display OFF" );
+				$sender->sendTip ( "TnTRun block position display OFF" );
 				return;
 			}
 			
 			if (strtolower ( $args [0] ) == "setsize") {
 				if (! $player->isOp ()) {
-					$player->sendMessage ( "* You are not authorized to use this command!*" );
+					$player->sendTip ( "* You are not authorized to use this command!*" );
 					return;
 				}
-				$sender->sendMessage ( "TnTRun sets arena size to ".$args [1]);
+				$sender->sendTip( "TnTRun sets arena size to ".$args [1]);
 				$this->pgin->arenaBuilder->boardsize = $args [1];
 				return;
 			}
 			
 			if (strtolower ( $args [0] ) == "liveplayers") {				
-				$sender->sendMessage ( "TnTRun LIVE players: ". count($this->pgin->livePlayers));
+				$sender->sendTip ( "TnTRun LIVE players: ". count($this->pgin->livePlayers));
 				foreach ($this->pgin->livePlayers as $p) {
 					$sender->sendMessage ($p->getName());
 				}
@@ -135,9 +135,7 @@ class TNTRunCommand {
 				$this->pgin->arenaPlayers = [];
 					
 				// send the arena owner first
-				$player->sendMessage ( "***************************************" );
-				$player->sendMessage ( "* TNT Run Reset done. it's ready for play! *" );
-				$player->sendMessage ( "***************************************" );
+				$player->sendTip ( "TNTRun Reset done. it's ready for play! *" );
 			}
 			
 			
@@ -145,7 +143,7 @@ class TNTRunCommand {
 			if ((strtolower ( $args [0] ) == "create")) {
 				// add arena owner to the list
 				if (! $player->isOp ()) {
-					$player->sendMessage ( "* You are not authorized to use this command!*" );
+					$player->sendTip ( "You are not authorized to use this command!*" );
 					return;
 				}
 				// $this->log ( "lp: " . $lp->getName () );
@@ -170,9 +168,7 @@ class TNTRunCommand {
 				$this->pgin->arenaPlayers = [ ];
 				
 				// send the arena owner first
-				$player->sendMessage ( "***************************************" );
-				$player->sendMessage ( "* TnTRun Arena Created. ready to play! *" );
-				$player->sendMessage ( "***************************************" );
+				$player->sendTip ( "TnTRun Arena Created. ready to play! *" );
 				
 				$this->pgin->game_mode = 0;				
 				return;
@@ -189,7 +185,7 @@ class TNTRunCommand {
 				
 				foreach ( $this->pgin->arenaPlayers as $p ) {
 					$this->pgin->livePlayers [$p->getName ()] = $p;
-					$p->sendMessage ( "TnTRun player! Go, Go, Go!!!" );
+					$p->sendTip ( "TnTRun player! Go, Go, Go!!!" );
 					//$explosion = new Explosion ( new Position ( $player->x, $player->y + 3, $player->z ), 2 );
 					//$explosion->explode ();
 				}				
@@ -201,12 +197,12 @@ class TNTRunCommand {
 			
 			if (strtolower ( $args [0] ) == "cleanup") {
 				if (! $player->isOp ()) {
-					$player->sendMessage ( "* You are not authorized to use this command!*" );
+					$player->sendTip( "* You are not authorized to use this command!*" );
 					return;
 				}
-				$player->sendMessage ( "Clean up TnTRun Arena, please wait!" );
+				$player->sendTip ( "Clean up TnTRun Arena, please wait!" );
 				$this->cleanUpArena ( $player->getLevel () );				
-				$player->sendMessage ( "use /tntrun reset to re-build arena." );	
+				$player->sendTip ( "use /tntrun reset to re-build arena." );	
 
 				$this->pgin->game_mode = 0;				
 				return;
@@ -215,7 +211,7 @@ class TNTRunCommand {
 			if (strtolower ( $args [0] ) == "join") {
 				
 				if (!$this->isArenaAvailable()) {
-					$player->sendMessage ( "Sorry, TnTRun game in-play. please wait!" );
+					$player->sendTip ( "Sorry, TnTRun game in-play. please wait!" );
 					return;
 				}
 				
@@ -238,7 +234,7 @@ class TNTRunCommand {
 					$player->sendMessage ( "when ready, tap the [green] block to [start]" );
 					$player->sendMessage ( "or tap the [gold] block to [exit]." );
 					$player->sendMessage ( "----------------------------------------" );					
-					$player->getServer()->broadcastMessage($player->getName ()." has Join TnT Run!");					
+					$player->getServer()->broadcastTip($player->getName ()." has Join TnT Run!");					
 				}
 			}
 		}
@@ -278,7 +274,7 @@ class TNTRunCommand {
 			} else {
 				
 				if (!$this->isArenaAvailable()) {
-					$player->sendMessage ( "Sorry, TnTRun game in-play. please wait!" );
+					$player->sendTip ( "Sorry, TnTRun game in-play. please wait!" );
 					return;
 				}
 								
@@ -291,7 +287,7 @@ class TNTRunCommand {
 				$event->getPlayer ()->sendMessage ( "when ready, tap the [green] block to [start]" );
 				$event->getPlayer ()->sendMessage ( "or tap the [gold] block to [exit]." );				
 				$event->getPlayer ()->sendMessage ( "----------------------------------------" );				
-				$event->getPlayer ()->getServer()->broadcastMessage($player->getName ()." has Join TnT Run!");
+				$event->getPlayer ()->getServer()->broadcastTip($player->getName ()." has Join TnT Run!");
 			}
 		}
 	}
@@ -327,7 +323,7 @@ class TNTRunCommand {
 				// $this->log ( "player /join: " . $px . " " . $py . " " . $pz );
 				$event->getPlayer ()->teleport ( new Position ( $px, $py, $pz ) );
 				$event->getPlayer ()->sendMessage ( "thanks for playing TnTRun!" );				
-				$event->getPlayer ()->getServer()->broadcastMessage($player->getName ()." has Left TnTRun!");
+				$event->getPlayer ()->getServer()->broadcastTip($player->getName ()." has Left TnTRun!");
 				
 				//if last player left the building, then change game mode
 				if ( count($this->pgin->livePlayers) == 0 && $this->pgin->game_mode==2 ) {
@@ -357,7 +353,7 @@ class TNTRunCommand {
 		$sz = $this->pgin->getConfig ()->get ( "tntrun_start_button_z" );
 		// START BUTTON//
 		if ((round ( $blockTouched->x ) == $lx && round ( $blockTouched->y ) == $ly && round ( $blockTouched->z ) == $lz) || (round ( $blockTouched->x ) == $sx && round ( $blockTouched->y ) == $sy && round ( $blockTouched->z ) == $sz)) {
-			$this->pgin->getServer ()->broadcastMessage ( "TnTRun round Started!" );
+			$this->pgin->getServer ()->broadcastTip ( "TnTRun round Started!" );
 			$this->pgin->game_mode = 1;
 			foreach ( $this->pgin->arenaPlayers as $p ) {
 				$this->pgin->livePlayers [$p->getName ()] = $p;
@@ -397,13 +393,13 @@ class TNTRunCommand {
 		if ((round ( $blockTouched->x ) == $lx && round ( $blockTouched->y ) == $ly && round ( $blockTouched->z ) == $lz) || (round ( $blockTouched->x ) == $sx && round ( $blockTouched->y ) == $sy && round ( $blockTouched->z ) == $sz)) {
 			
 			if (!$this->isArenaAvailable()) {
-				$player->sendMessage ( "Sorry, TnTRun game in-play. please wait!" );
+				$player->sendTip ( "Sorry, TnTRun game in-play. please wait!" );
 				return;
 			}
 
 			$this->pgin->game_mode = 0;
 			
-			$player->getServer ()->broadcastMessage ( "Resetting TnTRun, please wait..." );
+			$player->getServer ()->broadcastTip ( "Resetting TnTRun, please wait..." );
 			
 			$arenaName = $this->pgin->getConfig ()->get ( "tntrun_arena_name" );
 			$arenaSize = $this->pgin->getConfig ()->get ( "tntrun_arena_size" );
@@ -419,7 +415,7 @@ class TNTRunCommand {
 			
 			// // set session for this player
 			// $this->pgin->tntQuickSessions ["tntrun_arena"] = $arenaInfo;
-			$player->sendMessage ( "Reset arena floors" );
+			$player->sendTip ( "Reset arena floors" );
 			$arenaInfo = $this->pgin->arenaBuilder->resetArenaBuilding ( $player->getLevel (), new Position ( $arenaX, $arenaY, $arenaZ ) );
 			
 			// reset players
