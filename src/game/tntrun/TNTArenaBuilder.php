@@ -113,11 +113,14 @@ class TNTArenaBuilder {
 		$this->buildFloor ( $level, $px, ($py + 26), $pz, $bsize );
 		// bottom floor 3
 		$this->buildFloor ( $level, $px, ($py + 36), $pz, $bsize );
-		// bottom floor 2
 		// bottom floor 4
                 $this->buildFloor ( $level, $px, ($py + 46), $pz, $bsize );
 		// bottom floor 5
-		// $this->buildFloor($level, $px, ($py+56), $pz, $bsize);
+		$this->buildFloor ( $level, $px, ($py + 56), $pz, $bsize );
+		// bottom floor 6
+		$this->buildFloor ( $level, $px, ($py + 66), $pz, $bsize );
+		// bottom floor 7
+		$this->buildFloor ( $level, $px, ($py + 76), $pz, $bsize );
 		$this->addGameButtonsOnTopFloor ( $level );
 		
 		$pos = new Position ();
@@ -189,7 +192,11 @@ class TNTArenaBuilder {
 		// bottom floor 4
 		$this->ResetFloor ( $level, $px, ($py + 46), $pz, $bsize );
 		// bottom floor 5
-		// $this->ResetFloor($level, $px, ($py+56), $pz, $bsize);
+		$this->ResetFloor ( $level, $px, ($py + 56), $pz, $bsize )
+		// bottom floor 6
+		$this->ResetFloor ( $level, $px, ($py + 66), $pz, $bsize )
+		// bottom floor 8
+		$this->ResetFloor ( $level, $px, ($py + 76), $pz, $bsize )
 		
 		$this->addGameButtonsOnTopFloor ( $level );
 		
