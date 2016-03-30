@@ -149,10 +149,8 @@ class TNTArenaBuilder {
 	public function buildFloor(Level $level, $px, $py, $pz, $size) {
 		// build walls
 		$this->buildWall ( $level, $size + 1, $size + 1 - 5, $px, $py - 1, $pz, 1 );
-		// add bottom layer stone
-		$this->buildBoardLayer ( $level, $px, $py, $pz, 46, $size );
-		// add middle layer
-		$this->buildBoardLayer ( $level, $px, $py + 1, $pz, 12, $size );
+                // tntfloor
+		$this->buildBoardLayer ( $level, $px, $py + 1, $pz, 46, $size );
 	}
 	
 	
