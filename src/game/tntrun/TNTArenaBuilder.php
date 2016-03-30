@@ -150,7 +150,9 @@ class TNTArenaBuilder {
 		// build walls
 		$this->buildWall ( $level, $size + 1, $size + 1 - 5, $px, $py - 1, $pz, 1 );
                 // tntfloor
-		$this->buildBoardLayer ( $level, $px, $py + 1, $pz, 46, $size );
+		$this->buildBoardLayer ( $level, $px, $py + 1, $pz, 12, $size );
+ +                // tntfloor
+ +		$this->buildBoardLayer ( $level, $px, $py + 1, $pz, 46, $size );
 	}
 	
 	
