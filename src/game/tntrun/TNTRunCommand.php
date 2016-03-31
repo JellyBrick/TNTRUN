@@ -108,6 +108,16 @@ class TNTRunCommand {
 				$this->pgin->arenaBuilder->boardsize = $args [1];
 				return;
 			}
+				if (strtolower ( $args [0] ) == "help") {
+				if (! $player->isOp ()) {
+					$player->sendMessage ( "* You are not authorized to use this command!*" );
+					return;
+				}
+                                $output = "Minecraft PE TNTRUN 1.6\n";
+				$output .= "Commands: /tntrun create, /tntrun reset, /tntrun status, /tntrun join, /tntrun start, /tntrun cleanup, /tntrun blockon, /tntrun blockoff, /tntrun help";
+				$sender->SendMessage ( $output );
+				return;
+			}
 			
 			if (strtolower ( $args [0] ) == "liveplayers") {				
 				$sender->sendMessage ( "TnTRun LIVE players: ". count($this->pgin->livePlayers));
