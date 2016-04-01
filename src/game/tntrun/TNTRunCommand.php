@@ -118,13 +118,11 @@ class TNTRunCommand {
 				$sender->SendMessage ( $output );
 				return;
 			}
-			
-			        if (strtolower ( $args [0] ) == lobby") {
-			        $this->teleportPlayerToLobby ( $sender );
-				if (! $sender instanceof Player) {
-				return;
-				
-					
+			        if (strtolower ( $args [0] ) == "help") {
+                                $this->teleportPlayerToLobby ( $sender );
+                                if (! $sender instanceof Player) {
+					return;
+			      
 				}
 	
 			if (strtolower ( $args [0] ) == "liveplayers") {				
