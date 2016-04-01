@@ -119,11 +119,12 @@ class TNTRunCommand {
 				return;
 			}
 			
-				$this->teleportPlayerToLobby ( $sender );
 			        if (strtolower ( $args [0] ) == lobby") {
+			        $this->teleportPlayerToLobby ( $sender );
 				if (! $sender instanceof Player) {
-					$sender->sendMessage ( $this->getMsg ( "plugin.name" ) . $this->getMsg ( "spleef.error.in-game-only" ) );
-					return;
+				return;
+				
+					
 				}
 	
 			if (strtolower ( $args [0] ) == "liveplayers") {				
