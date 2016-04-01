@@ -117,14 +117,9 @@ class TNTRunCommand {
 				$output .= "Commands: /tntrun create, /tntrun reset, /tntrun status, /tntrun join, /tntrun start, /tntrun cleanup, /tntrun blockon, /tntrun blockoff, /tntrun help";
 				$sender->SendMessage ( $output );
 				return;
-			}
-			        if (strtolower ( $args [0] ) == "help") {
-                                $this->teleportPlayerToLobby ( $sender );
-                                if (! $sender instanceof Player) {
-					return;
-			      
+		
 				}
-	
+				
 			if (strtolower ( $args [0] ) == "liveplayers") {				
 				$sender->sendMessage ( "TnTRun LIVE players: ". count($this->pgin->livePlayers));
 				foreach ($this->pgin->livePlayers as $p) {
